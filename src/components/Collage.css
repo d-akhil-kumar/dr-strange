@@ -1,0 +1,22 @@
+.collage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.collage__item {
+  position: absolute;
+  max-width: none;
+  object-fit: cover;
+  user-select: none;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: transform;
+}
+
+/* Hovering a project card spreads the mock-ups outward */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card:hover .collage__item,
+  .project-card:focus-visible .collage__item {
+    transform: translate(var(--dx), var(--dy)) scale(1.04);
+  }
+}

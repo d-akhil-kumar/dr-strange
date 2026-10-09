@@ -1,0 +1,73 @@
+.case {
+  padding: 50px 0 120px;
+}
+
+.case__nav {
+  width: min(1196px, 100% - var(--gutter) * 2);
+  margin: 0 auto 61px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.case__back,
+.case__next {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  text-decoration: none;
+  transition:
+    gap 0.2s ease,
+    opacity 0.2s ease;
+}
+.case__back {
+  color: var(--ink);
+}
+.case__next {
+  color: var(--next-link);
+}
+.case__back:hover,
+.case__next:hover {
+  gap: 10px;
+}
+
+/* intro block (title + summary) is narrower and centred */
+.case__main .blocks__section:first-child {
+  width: min(700px, 100%);
+  margin-inline: auto;
+}
+
+.case__footer {
+  margin-top: var(--section-gap);
+  padding-top: 32px;
+  border-top: 1px solid var(--hairline);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .case {
+    padding-top: 24px;
+  }
+  .case__nav {
+    margin-bottom: 36px;
+  }
+  .case__back,
+  .case__next {
+    font-size: 15px;
+  }
+}
+
+/* the intro summary is set tight, like the design */
+.case__main .blocks__section:first-child .stack--flow {
+  gap: 0;
+}
+.case__main .blocks__section:first-child .text {
+  line-height: 18px;
+}
